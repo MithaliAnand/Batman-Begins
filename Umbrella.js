@@ -1,0 +1,23 @@
+class Umbrella {
+    constructor(x,y){
+        var options = {
+            isStatic:true,
+            friction:0,
+            restitution:1,
+            density:0.8
+
+        }
+        this.umbrella = Bodies.circle(x,y,50,options);
+        this.r = 50 ;
+        this.image = loadImage("Walking/walking_1.png");
+        World.add(world,this.umbrella);
+    }
+    display(){
+        var pos=this.umbrella.position;
+		imageMode(CENTER)
+		image(this.image,pos.x,pos.y+70, 300,300);
+		
+			
+    }
+      
+}
